@@ -1,0 +1,20 @@
+{
+  "name": "school",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/bibik-daniil/School#readme",
+  "bugs": {
+    "url": "https://github.com/bibik-daniil/School/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bibik-daniil/School.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "module",
+  "main": "main.js",
+  "scripts": {
+    "dev": "node main.js"
+  }
+}
