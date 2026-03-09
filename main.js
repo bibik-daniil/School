@@ -4,7 +4,7 @@ import Teacher from "./Teacher.js"
 import Student from "./Student.js"
 
 const bookOne = new Book({
-    name: 'Жила была бабка 4',
+    name: 'Жила была бабка',
     author: 'Алекандр Бабкин', 
     language: 'Русский'
 })

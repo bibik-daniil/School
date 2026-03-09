@@ -36,9 +36,9 @@ class Class {
     
 
     delClassTeacher(classTeacher) {
-        this.classTeacher.delete(classTeacher)
+        this.classTeacher = null
         for (const student of this.students) {
-            student.classTeacher.delete(classTeacher)
+            student.classTeacher = null
         }
     }
 
