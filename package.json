@@ -13,8 +13,8 @@
   "license": "ISC",
   "author": "",
   "type": "module",
-  "main": "main.js",
+  "main": "main.ts",
   "scripts": {
-    "dev": "node main.js"
+    "dev": "node main.ts"
   }
 }

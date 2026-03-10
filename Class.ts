@@ -1,14 +1,26 @@
-class Class {
-    students = new Set()
-    teachers = new Set()
-    classTeacher = null
+import Student from "./Student.ts"
+import Teacher from "./Teacher.ts"
 
-    constructor({number, letter}) {
+type ClassTeacher = null | Teacher
+
+interface ClassValues {
+    number: number
+    letter: string
+}
+
+class Class {
+    students = new Set<Student>()
+    teachers = new Set<Teacher>()
+    classTeacher: ClassTeacher = null
+    number: number
+    letter: string
+
+    constructor({number, letter}: ClassValues) {
         this.number = number
         this.letter = letter
     }
     
-    addTeacher(teacher) {
+    addTeacher(teacher: Teacher) {
         this.teachers.add(teacher)
         teacher.klass = this
 
@@ -17,16 +29,16 @@ class Class {
         }
     }
 
-    delTeacher(teacher) {
+    delTeacher(teacher: Teacher) {
         this.teachers.delete(teacher)
-        teacher.klass.delete(this)
+        teacher.klass = null
 
         for (const student of this.students) {
             student.teachers.delete(teacher)
         }
     }
 
-    addClassTeacher(classTeacher) {
+    addClassTeacher(classTeacher: Teacher) {
         this.classTeacher = classTeacher
 
         for (const student of this.students) {
@@ -35,21 +47,21 @@ class Class {
     }
     
 
-    delClassTeacher(classTeacher) {
+    delClassTeacher(classTeacher: Teacher) {
         this.classTeacher = null
         for (const student of this.students) {
             student.classTeacher = null
         }
     }
 
-    addStudent(student) {
+    addStudent(student: Student) {
         this.students.add(student)
         student.klass = this
     }
 
-    delStudent(student) {
+    delStudent(student: Student) {
         this.students.delete(student)
-        delete student.klass     
+        student.klass = null     
     }
 
 }

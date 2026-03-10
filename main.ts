@@ -1,7 +1,7 @@
-import Book from "./Book.js"
-import Class from "./Class.js"
-import Teacher from "./Teacher.js"
-import Student from "./Student.js"
+import Book from "./Book.ts"
+import Class from "./Class.ts"
+import Teacher from "./Teacher.ts"
+import Student from "./Student.ts"
 
 const bookOne = new Book({
     name: 'Жила была бабка',
