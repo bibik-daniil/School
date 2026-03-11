@@ -1,0 +1,13 @@
+import { bookOne, bookTwo, bookThree, bookFour, student1, student2, class2A, class2B, teacher1, teacher2 } from "./Variables.js";
+student1.books.add(bookOne);
+student1.books.add(bookTwo);
+student1.books.add(bookThree);
+student2.books.add(bookTwo);
+student2.books.add(bookFour);
+student1.finishBook(bookThree);
+class2A.addStudent(student2);
+class2B.addStudent(student1);
+class2A.addTeacher(teacher1);
+class2A.addTeacher(teacher2);
+class2A.addClassTeacher(teacher1);
+console.log(student2);

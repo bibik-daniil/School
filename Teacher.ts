@@ -1,19 +1,25 @@
-import Class from "./Class.ts"
+import Class from "./Class.js"
 
-type Klass = null | Class
+enum GradeSexuality {
+    WORST = 'Свинобабка',
+    BAD = 'Пудж',
+    NORMAL = 'Нормис',
+    GOOD = 'Соска',
+    AMAZING = 'Я бы вдул, но кончу, не успев засунуть'
+}
 
 
-interface TeacherValues {
+interface TeacherProps {
     fullName: string
-    gradeSexuality: string
+    gradeSexuality: GradeSexuality
 }
 
 class Teacher {
-    klass: Klass = null
+    klass: null | Class = null
     fullName: string
-    gradeSexuality: string
+    gradeSexuality: GradeSexuality
 
-    constructor({fullName, gradeSexuality}: TeacherValues) {
+    constructor({fullName, gradeSexuality}: TeacherProps) {
         this.fullName = fullName
         this.gradeSexuality = gradeSexuality
     }

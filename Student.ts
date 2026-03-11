@@ -1,25 +1,22 @@
-import Class from "./Class.ts"
-import Book from "./Book.ts"
-import Teacher from "./Teacher.ts"
+import Class from "./Class.js"
+import Book from "./Book.js"
+import Teacher from "./Teacher.js"
 
-type ClassTeacher = null | Teacher
-type Klass = null | Class
-
-interface StudentValues {
+interface StudentProps {
     fullName: string
     dateOfBirth: Date
 }
 
 class Student {
-    books = new Set()
-    booksRead = new Set()
-    teachers = new Set()
-    classTeacher: ClassTeacher = null
-    klass: Klass = null
+    books = new Set<Book>()
+    booksRead = new Set<Book>()
+    teachers = new Set<Teacher>()
+    classTeacher: null | Teacher = null
+    klass: null | Class = null
     fullName: string
     dateOfBirth: Date
 
-    constructor({fullName, dateOfBirth}: StudentValues) {
+    constructor({fullName, dateOfBirth}: StudentProps) {
         this.fullName = fullName
         this.dateOfBirth = dateOfBirth
     }

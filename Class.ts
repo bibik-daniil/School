@@ -1,9 +1,8 @@
-import Student from "./Student.ts"
-import Teacher from "./Teacher.ts"
+import Student from "./Student.js"
+import Teacher from "./Teacher.js"
 
-type ClassTeacher = null | Teacher
 
-interface ClassValues {
+interface ClassProps {
     number: number
     letter: string
 }
@@ -11,11 +10,11 @@ interface ClassValues {
 class Class {
     students = new Set<Student>()
     teachers = new Set<Teacher>()
-    classTeacher: ClassTeacher = null
+    classTeacher: null | Teacher = null
     number: number
     letter: string
 
-    constructor({number, letter}: ClassValues) {
+    constructor({number, letter}: ClassProps) {
         this.number = number
         this.letter = letter
     }
@@ -47,7 +46,7 @@ class Class {
     }
     
 
-    delClassTeacher(classTeacher: Teacher) {
+    delClassTeacher() {
         this.classTeacher = null
         for (const student of this.students) {
             student.classTeacher = null

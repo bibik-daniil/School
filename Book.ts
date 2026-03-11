@@ -1,17 +1,17 @@
-interface BookValues {
+interface BookProps {
     name: string,
     author: string,
     language: string
 }
 
 class Book {
-    pages: number = Math.round(Math.random() * 1_000)
+    numberOfPages: number = Math.round(Math.random() * 1_000)
     dateOfWriting: Date = new Date()
     name: string
     author: string
     language: string
 
-    constructor({name, author, language}: BookValues) {
+    constructor({name, author, language}: BookProps) {
         this.name = name
         this.author = author
         this.language = language

@@ -15,6 +15,11 @@
   "type": "module",
   "main": "main.ts",
   "scripts": {
-    "dev": "node main.ts"
+    "build": "tsc",
+    "dev": "npm run build && node dist/main.js"
+  },
+  "devDependencies": {
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.3"
   }
 }

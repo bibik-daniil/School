@@ -1,51 +1,19 @@
-import Book from "./Book.ts"
-import Class from "./Class.ts"
-import Teacher from "./Teacher.ts"
-import Student from "./Student.ts"
+import {bookOne, bookTwo, bookThree, bookFour, student1, student2, class2A, class2B, teacher1, teacher2} from "./Variables.js"
 
-const bookOne = new Book({
-    name: 'Жила была бабка',
-    author: 'Алекандр Бабкин', 
-    language: 'Русский'
-})
-const bookTwo = new Book({
-    name: 'Kek',
-    author: 'Jack kuck', 
-    language: 'English'
-})
-const bookThree = new Book({
-    name: 'la pososala', 
-    author: 'Jan Pier Pulnareff', 
-    language: 'French'
-})
-const bookFour = new Book({
-    name: 'Ahuel divin mactraihen', 
-    author: 'Gitler Kaput', 
-    language: 'Germany'
-})
+student1.books.add(bookOne)
+student1.books.add(bookTwo)
+student1.books.add(bookThree)
 
-const student1 = new Student({
-    fullName: 'Фио ученика 1',
-    dateOfBirth: new Date('2000-02-21')
-})
+student2.books.add(bookTwo)
+student2.books.add(bookFour)
 
-const student2 = new Student({
-    fullName: 'Фио ученика 2',
-    dateOfBirth: new Date('2001-07-22')
-})
-
-const class2A = new Class({number: 2, letter: 'A'})
-const class2B = new Class({number: 2, letter: 'B'})
-
+student1.finishBook(bookThree)
 
 class2A.addStudent(student2)
 class2B.addStudent(student1)
 
-const teacher1 = new Teacher({fullName: 'Тамара Петровна Борзая', gradeSexuality: 'Пудж'})
-const teacher2 = new Teacher({fullName: 'Анжелика Александровна Горячая', gradeSexuality: 'Соска'})
-
 class2A.addTeacher(teacher1)
 class2A.addTeacher(teacher2)
-//class2A.addClassTeacher(teacher1)
+class2A.addClassTeacher(teacher1)
 
 console.log(student2)
