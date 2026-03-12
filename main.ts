@@ -1,19 +1,19 @@
-import {bookOne, bookTwo, bookThree, bookFour, student1, student2, class2A, class2B, teacher1, teacher2} from "./Variables.js"
+import * as variables from "./variables.js"
 
-student1.books.add(bookOne)
-student1.books.add(bookTwo)
-student1.books.add(bookThree)
+variables.student1.books.add(variables.bookOne)
+variables.student1.books.add(variables.bookTwo)
+variables.student1.books.add(variables.bookThree)
 
-student2.books.add(bookTwo)
-student2.books.add(bookFour)
+variables.student2.books.add(variables.bookTwo)
+variables.student2.books.add(variables.bookFour)
 
-student1.finishBook(bookThree)
+variables.student1.finishBook(variables.bookThree)
 
-class2A.addStudent(student2)
-class2B.addStudent(student1)
+variables.class2A.addStudent(variables.student2)
+variables.class2B.addStudent(variables.student1)
 
-class2A.addTeacher(teacher1)
-class2A.addTeacher(teacher2)
-class2A.addClassTeacher(teacher1)
+variables.class2A.addTeacher(variables.teacher1)
+variables.class2A.addTeacher(variables.teacher2)
+variables.class2A.addClassTeacher(variables.teacher1)
 
-console.log(student2)
+console.log(variables.student2)

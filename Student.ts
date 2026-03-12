@@ -1,6 +1,6 @@
 import Class from "./Class.js"
 import Book from "./Book.js"
-import Teacher from "./Teacher.js"
+import {Teacher} from "./Teacher.js"
 
 interface StudentProps {
     fullName: string

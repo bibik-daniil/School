@@ -1,6 +1,5 @@
 import Student from "./Student.js"
-import Teacher from "./Teacher.js"
-
+import {Teacher} from "./Teacher.js"
 
 interface ClassProps {
     number: number
