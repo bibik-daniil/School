@@ -1,6 +1,6 @@
 import Book from "./Book.js"
 import Class from "./Class.js"
-import Teacher from "./Teacher.js"
+import {Teacher, GradeSexuality} from "./Teacher.js"
 import Student from "./Student.js"
 
 const bookOne = new Book({
@@ -34,18 +34,22 @@ const student2 = new Student({
     dateOfBirth: new Date('2001-07-22')
 })
 
-const class2A = new Class({number: 2, letter: 'A'})
-const class2B = new Class({number: 2, letter: 'B'})
+const class2A = new Class({
+    number: 2, 
+    letter: 'A'
+})
+const class2B = new Class({
+    number: 2, 
+    letter: 'B'
+})
 
+const teacher1 = new Teacher({
+    fullName: 'Тамара Петровна Борзая', 
+    gradeSexuality: GradeSexuality.BAD
+})
+const teacher2 = new Teacher({
+    fullName: 'Анжелика Александровна Горячая', 
+    gradeSexuality: GradeSexuality.GOOD
+})
 
-class2A.addStudent(student2)
-class2B.addStudent(student1)
-
-const teacher1 = new Teacher({fullName: 'Тамара Петровна Борзая', gradeSexuality: 'Пудж'})
-const teacher2 = new Teacher({fullName: 'Анжелика Александровна Горячая', gradeSexuality: 'Соска'})
-
-class2A.addTeacher(teacher1)
-class2A.addTeacher(teacher2)
-//class2A.addClassTeacher(teacher1)
-
-console.log(student2)
+export {bookOne, bookTwo, bookThree, bookFour, student1, student2, class2A, class2B, teacher1, teacher2}

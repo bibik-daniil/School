@@ -13,8 +13,13 @@
   "license": "ISC",
   "author": "",
   "type": "module",
-  "main": "main.js",
+  "main": "main.ts",
   "scripts": {
-    "dev": "node main.js"
+    "build": "tsc",
+    "dev": "npm run build && node dist/main.js"
+  },
+  "devDependencies": {
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.3"
   }
 }
