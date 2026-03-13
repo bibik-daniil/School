@@ -1,4 +1,4 @@
-import * as variables from "./variablesChanged.js"
+import * as variables from "./variables.js"
 
 variables.student1.books.add(variables.bookOne)
 variables.student1.books.add(variables.bookTwo)
