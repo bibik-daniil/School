@@ -4,7 +4,7 @@ interface BookProps {
     language: string
 }
 
-class Book {
+export class Book {
     numberOfPages: number = Math.round(Math.random() * 1_000)
     dateOfWriting: Date = new Date()
     name: string
@@ -17,5 +17,3 @@ class Book {
         this.language = language
     }
 }
-
-export default Book

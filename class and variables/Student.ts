@@ -1,5 +1,5 @@
-import Class from "./Class.js"
-import Book from "./Book.js"
+import {Class} from "./Class.js"
+import {Book} from "./Book.js"
 import {Teacher} from "./Teacher.js"
 
 interface StudentProps {
@@ -7,7 +7,7 @@ interface StudentProps {
     dateOfBirth: Date
 }
 
-class Student {
+export class Student {
     books = new Set<Book>()
     booksRead = new Set<Book>()
     teachers = new Set<Teacher>()
@@ -26,5 +26,3 @@ class Student {
         this.books.delete(book)
     }
 }
-
-export default Student

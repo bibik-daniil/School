@@ -1,4 +1,4 @@
-import Student from "./Student.js"
+import {Student} from "./Student.js"
 import {Teacher} from "./Teacher.js"
 
 interface ClassProps {
@@ -6,7 +6,7 @@ interface ClassProps {
     letter: string
 }
 
-class Class {
+export class Class {
     students = new Set<Student>()
     teachers = new Set<Teacher>()
     classTeacher: null | Teacher = null
@@ -63,5 +63,3 @@ class Class {
     }
 
 }
-
-export default Class
