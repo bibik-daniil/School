@@ -1,4 +1,4 @@
-import {Class} from "./Class.js"
+import Class from "./Class.js"
 
 enum GradeSexuality {
     WORST = 'Свинобабка',
