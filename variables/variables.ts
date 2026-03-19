@@ -1,7 +1,4 @@
-import Book from "../class/Book.js";
-import Class from "../class/Class.js";
-import { Teacher, GradeSexuality } from "../class/Teacher.js";
-import Student from "../class/Student.js";
+import {Book, Class, Student, Teacher, GradeSexuality } from "../class/index.js";
 
 const bookOne = new Book({
   name: "Жила была бабка",

@@ -7,7 +7,7 @@ interface StudentProps {
   dateOfBirth: Date;
 }
 
-class Student {
+export default class Student {
   books = new Set<Book>();
   booksRead = new Set<Book>();
   teachers = new Set<Teacher>();
@@ -26,5 +26,3 @@ class Student {
     this.books.delete(book);
   }
 }
-
-export default Student

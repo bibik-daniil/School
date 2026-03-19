@@ -6,7 +6,7 @@ interface ClassProps {
   letter: string;
 }
 
-class Class {
+export default class Class {
   students = new Set<Student>();
   teachers = new Set<Teacher>();
   classTeacher: null | Teacher = null;
@@ -61,5 +61,3 @@ class Class {
     student.klass = null;
   }
 }
-
-export default Class
