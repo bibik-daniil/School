@@ -14,7 +14,7 @@ interface TeacherProps {
     gradeSexuality: GradeSexuality
 }
 
-export class Teacher {
+export default class Teacher {
     klass: null | Class = null
     fullName: string
     gradeSexuality: GradeSexuality

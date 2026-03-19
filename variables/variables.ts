@@ -1,4 +1,4 @@
-import {Book, Class, Student, Teacher, GradeSexuality } from "../class/index.js";
+import { Book, Class, Student, Teacher, GradeSexuality } from "../class/index.js";
 
 const bookOne = new Book({
   name: "Жила была бабка",
