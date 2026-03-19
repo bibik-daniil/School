@@ -1,6 +1,6 @@
 import Class from "./Class.js"
 
-enum GradeSexuality {
+export enum GradeSexuality {
     WORST = 'Свинобабка',
     BAD = 'Пудж',
     NORMAL = 'Нормис',
@@ -14,7 +14,7 @@ interface TeacherProps {
     gradeSexuality: GradeSexuality
 }
 
-class Teacher {
+export default class Teacher {
     klass: null | Class = null
     fullName: string
     gradeSexuality: GradeSexuality
@@ -25,5 +25,3 @@ class Teacher {
     }
 
 }
-
-export { Teacher, GradeSexuality }
